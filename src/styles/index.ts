@@ -4,9 +4,13 @@ import styles from "./styles";
 import colors from "./foundations/colors";
 import fonts from "./foundations/fonts";
 
+import Text from "./components/text";
+
 const theme = extendTheme({
   styles,
-  components: {},
+  components: {
+    Text,
+  },
   colors,
   fonts,
 });
