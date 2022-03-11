@@ -33,6 +33,9 @@ class MyDocument extends Document {
             crossOrigin="true"
           />
 
+          {/* Favicon */}
+          <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+
           {/* Fonts */}
           <link
             href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Inter:wght@400;600&display=swap"
