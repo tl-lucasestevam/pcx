@@ -1,35 +1,26 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Text,
-  useMediaQuery,
-  useDisclosure,
-} from "@chakra-ui/react";
-import { FC } from "react";
+import { Box, Container, Flex, Text, useMediaQuery } from "@chakra-ui/react";
+import { FC, useEffect, useState } from "react";
 import LoginButton from "./LoginButton";
-import { AiOutlineMenu } from "react-icons/ai";
 import Logo from "./Logo";
-import MobileMenu from "./MobileMenu";
 
 interface HeaderProps {
   title: string;
 }
 
 const Header: FC<HeaderProps> = ({ title }) => {
-  const [isLargerThan320] = useMediaQuery("(min-width: 320px)");
-
   return (
     <Flex pos="fixed" w="full">
       <Logo />
-      <Box h="5rem" bg="white" w="full">
+      <Box h="5rem" bg="white" w="calc(100vw - 5rem)">
         <Container maxW="1120px" h="full">
           <Flex
             h="5rem"
-            justifyContent={isLargerThan320 ? "space-between" : "flex-end"}
+            justifyContent={{ base: "flex-end", sm: "space-between" }}
             alignItems="center"
           >
-            {isLargerThan320 && <Text variant="header">{title}</Text>}
+            <Text variant="header" display={{ base: "none", sm: "block" }}>
+              {title}
+            </Text>
             <LoginButton />
           </Flex>
         </Container>
