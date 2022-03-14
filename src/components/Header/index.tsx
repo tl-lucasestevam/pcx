@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({ title }) => {
   return (
-    <Flex pos="fixed" w="full">
+    <Flex pos="fixed" w="full" zIndex="999">
       <Logo />
       <Box h="5rem" bg="white" w="calc(100vw - 5rem)">
         <Container maxW="1120px" h="full">

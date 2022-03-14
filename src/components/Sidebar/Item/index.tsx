@@ -21,12 +21,9 @@ const Item: FC<SidebarItemProps> = ({ path }) => {
       alignItems="center"
       justifyContent="center"
       transition="0.3s all"
-      borderLeft={{ base: "none", md: "solid" }}
-      borderLeftWidth="5px"
+      borderLeft="5px solid"
+      // borderBottom={{ base: "5px solid", md: "0px solid" }}
       borderColor={isActive ? "red.500" : "transparent"}
-      borderBottom={{ base: "solid", md: "none" }}
-      borderBottomWidth="5px"
-      borderBottomColor={isActive ? "red.500" : "transparent"}
       bg={isActive ? "#000" : "transparent"}
       _hover={{
         cursor: "pointer",

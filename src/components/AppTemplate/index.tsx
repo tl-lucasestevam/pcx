@@ -12,7 +12,12 @@ const AppTemplate: FC<AppTemplateProps> = ({ children }) => {
       <Header title="Login" />
       <Sidebar />
 
-      <Box ml="auto" pt="5rem" w="calc(100vw - 5rem)">
+      <Box
+        ml="auto"
+        pb={{ base: "5rem", md: "0" }}
+        pt="5rem"
+        w={{ base: "100vw", md: "calc(100vw - 5rem)" }}
+      >
         <Container maxW="1120px" h="full" minH="calc(100vh - 5rem)">
           {children}
         </Container>

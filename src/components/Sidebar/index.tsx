@@ -7,6 +7,7 @@ const Sidebar: FC = () => {
   return (
     <Box
       pos="fixed"
+      zIndex="999"
       mt={{ base: "0", md: "5rem" }}
       bottom={{ base: "0", md: "auto" }}
       minH={{ base: "5rem", md: "calc(100vh - 5rem)" }}
