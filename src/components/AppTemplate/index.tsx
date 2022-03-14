@@ -12,14 +12,8 @@ const AppTemplate: FC<AppTemplateProps> = ({ children }) => {
       <Header title="Login" />
       <Sidebar />
 
-      <Box ml="auto" pt="5rem" w="calc(100vw - 5rem)" h="100vh">
-        <Container
-          maxW="1120px"
-          d="flex"
-          alignItems="center"
-          justifyContent="space-between"
-          h="full"
-        >
+      <Box ml="auto" pt="5rem" w="calc(100vw - 5rem)">
+        <Container maxW="1120px" h="full" minH="calc(100vh - 5rem)">
           {children}
         </Container>
       </Box>
