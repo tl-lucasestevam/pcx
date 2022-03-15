@@ -4,8 +4,8 @@ import { AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { Input } from "..";
 import Link from "next/link";
+import Input from "../Input";
 
 interface LoginFormData {
   email: string;
@@ -39,7 +39,7 @@ const LoginForm: FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(handleLogin)}>
+    <form noValidate onSubmit={handleSubmit(handleLogin)}>
       <Stack spacing={6}>
         <Input
           icon={
@@ -67,7 +67,7 @@ const LoginForm: FC = () => {
         />
       </Stack>
       <Box my={6}>
-        <Link passHref href="/forget">
+        <Link passHref href="/recovery">
           <Text
             as="a"
             _hover={{ cursor: "pointer", color: "red.500" }}
