@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Link from "next/link";
 import Input from "../Input";
+import InputIcon from "../InputIcon";
 
 interface LoginFormData {
   email: string;
@@ -42,24 +43,14 @@ const LoginForm: FC = () => {
     <form noValidate onSubmit={handleSubmit(handleLogin)}>
       <Stack spacing={6}>
         <Input
-          icon={
-            <AiOutlineMail
-              size="1.5rem"
-              color="var(--chakra-colors-gray-600)"
-            />
-          }
+          iconLeft={<InputIcon icon={<AiOutlineMail />} />}
           placeholder="E-mail"
           type="email"
           error={errors.email}
           {...register("email")}
         />
         <Input
-          icon={
-            <AiOutlineLock
-              size="1.5rem"
-              color="var(--chakra-colors-gray-600)"
-            />
-          }
+          iconLeft={<InputIcon icon={<AiOutlineLock />} />}
           placeholder="Password"
           type="password"
           error={errors.password}

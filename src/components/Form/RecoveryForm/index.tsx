@@ -1,11 +1,11 @@
 import { FC } from "react";
-import { Text, Button, Stack, Box } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import { AiOutlineMail } from "react-icons/ai";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import Link from "next/link";
 import Input from "../Input";
+import InputIcon from "../InputIcon";
 
 interface RecoveryFormData {
   email: string;
@@ -36,9 +36,7 @@ const RecoveryForm: FC = () => {
   return (
     <form noValidate onSubmit={handleSubmit(handleLogin)}>
       <Input
-        icon={
-          <AiOutlineMail size="1.5rem" color="var(--chakra-colors-gray-600)" />
-        }
+        iconLeft={<InputIcon icon={<AiOutlineMail />} />}
         placeholder="E-mail"
         type="email"
         error={errors.email}
