@@ -32,14 +32,16 @@ class MyDocument extends Document {
             href="https://fonts.gstatic.com"
             crossOrigin="true"
           />
-
           {/* Favicon */}
           <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-
           {/* Fonts */}
           <link
             href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap"
             rel="stylesheet"
+          />
+          <meta
+            name="description"
+            content="Pcx is a marketplace for buying and selling used hardware safely, easily and quickly."
           />
         </Head>
         <body>
