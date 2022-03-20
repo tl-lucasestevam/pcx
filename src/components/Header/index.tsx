@@ -1,5 +1,5 @@
-import { Box, Container, Flex, Text, useMediaQuery } from "@chakra-ui/react";
-import { FC, useEffect, useState } from "react";
+import { Box, Container, Flex, Text } from "@chakra-ui/react";
+import { FC } from "react";
 import LoginButton from "./LoginButton";
 import Logo from "./Logo";
 

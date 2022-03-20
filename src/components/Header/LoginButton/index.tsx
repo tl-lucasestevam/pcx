@@ -1,15 +1,24 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import { HStack, Avatar, Text } from "@chakra-ui/react";
+import { AuthContext } from "../../../contexts";
+import Link from "next/link";
 
 const LoginButton: FC = () => {
-  const firstName = "";
-  const avatarUrl = "";
-
+  const { user } = useContext(AuthContext);
   return (
-    <HStack spacing="4" _hover={{ cursor: "pointer" }}>
-      <Text fontWeight="600">{firstName ? firstName : "Login"}</Text>
-      <Avatar color="gray.600" bg="gray.200" name={firstName} src={avatarUrl} />
-    </HStack>
+    <Link href="/settings" passHref>
+      <HStack spacing="4" _hover={{ cursor: "pointer" }}>
+        <Text fontWeight="600">
+          {user.name ? user.name?.split(" ")[0] : "Login"}
+        </Text>
+        <Avatar
+          color="gray.600"
+          bg="gray.200"
+          name={user.name}
+          src={user.avatar}
+        />
+      </HStack>
+    </Link>
   );
 };
 
