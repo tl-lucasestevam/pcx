@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useContext, useState } from "react";
 import { Button, Stack } from "@chakra-ui/react";
 import {
   AiOutlineMail,
@@ -11,8 +11,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Input from "../Input";
 import InputIcon from "../InputIcon";
+import { AuthContext } from "../../../contexts";
 
-interface RecoveryFormData {
+interface SignUpFormData {
   name: string;
   email: string;
   cpf: string;
@@ -20,7 +21,7 @@ interface RecoveryFormData {
   confirmPassword: string;
 }
 
-const RecoveryFormSchema = yup.object({
+const SignUpFormSchema = yup.object({
   name: yup
     .string()
     .required("Name is a required field")
@@ -46,25 +47,36 @@ const RecoveryFormSchema = yup.object({
     .oneOf([yup.ref("password"), null], "Passwords must match"),
 });
 
-const RecoveryForm: FC = () => {
+const SignUpForm: FC = () => {
+  const { signUp } = useContext(AuthContext);
+  const [loading, setLoading] = useState(false);
+
   const {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm<RecoveryFormData>({
-    resolver: yupResolver(RecoveryFormSchema),
+  } = useForm<SignUpFormData>({
+    resolver: yupResolver(SignUpFormSchema),
   });
 
-  const handleLogin: SubmitHandler<RecoveryFormData> = async ({
-    name,
-    email,
+  const handleLoginSignUp: SubmitHandler<SignUpFormData> = async ({
     cpf,
+    email,
+    name,
+    password,
   }) => {
-    console.log(name, email, cpf);
+    setLoading(true);
+    await signUp({
+      cpf,
+      email,
+      name,
+      password,
+    });
+    setLoading(false);
   };
 
   return (
-    <form noValidate onSubmit={handleSubmit(handleLogin)}>
+    <form noValidate onSubmit={handleSubmit(handleLoginSignUp)}>
       <Stack spacing={6}>
         <Input
           iconLeft={<InputIcon icon={<AiOutlineUser />} />}
@@ -99,11 +111,11 @@ const RecoveryForm: FC = () => {
           {...register("confirmPassword")}
         />
       </Stack>
-      <Button w="full" mt={6} type="submit" mb="4">
+      <Button isLoading={loading} w="full" mt={6} type="submit" mb="4">
         Create account
       </Button>
     </form>
   );
 };
 
-export default RecoveryForm;
+export default SignUpForm;

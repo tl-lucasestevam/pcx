@@ -44,7 +44,6 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
           ref={ref}
           as={mask ? InputMask : ChakraInput}
           mask={mask}
-          maskChar={null}
           {...rest}
         />
         {iconRight && (
