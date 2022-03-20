@@ -23,10 +23,27 @@ const Button: ComponentStyleConfig = {
       _hover: {
         bg: "red.400",
         borderColor: "red.400",
+        cursor: "pointer",
         _disabled: {
           bg: "red.500",
           borderColor: "red.500",
         },
+      },
+    },
+    gray: {
+      h: "4rem",
+      bg: "gray.700",
+      borderRadius: "0px",
+      fontFamily: "Inter",
+      fontSize: "1rem",
+      lineHeight: "20px",
+      color: "white",
+      border: "2px solid",
+      borderColor: "gray.700",
+      transition: "all 0.3s",
+      p: "2rem",
+      _hover: {
+        cursor: "pointer",
       },
     },
     grayOutline: {
@@ -42,6 +59,7 @@ const Button: ComponentStyleConfig = {
       transition: "all 0.3s",
       _hover: {
         borderColor: "gray.400",
+        cursor: "pointer",
       },
     },
   },

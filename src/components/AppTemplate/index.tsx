@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 import { Box, Container } from "@chakra-ui/react";
-import { Sidebar, Header } from "..";
+import { Sidebar, Header, Modal } from "..";
 
 interface AppTemplateProps {
   children: ReactNode;
@@ -18,6 +18,7 @@ const AppTemplate: FC<AppTemplateProps> = ({ children }) => {
         pt="5rem"
         w={{ base: "100vw", md: "calc(100vw - 5rem)" }}
       >
+        <Modal />
         <Container maxW="1120px" h="full" minH="calc(100vh - 5rem)">
           {children}
         </Container>

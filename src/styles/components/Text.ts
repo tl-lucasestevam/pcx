@@ -11,6 +11,11 @@ const Text: ComponentStyleConfig = {
       fontSize: "20px",
       fontWeight: "600",
     },
+    modal: {
+      fontSize: "18px",
+      lineHeight: "28px",
+      color: "gray.400",
+    },
   },
 };
 
