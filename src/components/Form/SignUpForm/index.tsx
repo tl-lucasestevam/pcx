@@ -12,14 +12,7 @@ import * as yup from "yup";
 import Input from "../Input";
 import InputIcon from "../InputIcon";
 import { AuthContext } from "../../../contexts";
-
-interface SignUpFormData {
-  name: string;
-  email: string;
-  cpf: string;
-  password: string;
-  confirmPassword: string;
-}
+import { SignUpFormCredentials } from "../../../interfaces";
 
 const SignUpFormSchema = yup.object({
   name: yup
@@ -55,28 +48,20 @@ const SignUpForm: FC = () => {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm<SignUpFormData>({
+  } = useForm<SignUpFormCredentials>({
     resolver: yupResolver(SignUpFormSchema),
   });
 
-  const handleLoginSignUp: SubmitHandler<SignUpFormData> = async ({
-    cpf,
-    email,
-    name,
-    password,
-  }) => {
+  const handleSignUp: SubmitHandler<SignUpFormCredentials> = async (
+    formData
+  ) => {
     setLoading(true);
-    await signUp({
-      cpf,
-      email,
-      name,
-      password,
-    });
+    await signUp(formData);
     setLoading(false);
   };
 
   return (
-    <form noValidate onSubmit={handleSubmit(handleLoginSignUp)}>
+    <form noValidate onSubmit={handleSubmit(handleSignUp)}>
       <Stack spacing={6}>
         <Input
           iconLeft={<InputIcon icon={<AiOutlineUser />} />}
