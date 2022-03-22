@@ -14,7 +14,7 @@ import type { SignUpFormCredentials, User } from "../interfaces";
 import { api } from "../services";
 
 interface AuthContextData {
-  signUp: (signUpCredentials: SignUpCredentials) => Promise<void>;
+  signUp: (signUpCredentials: SignUpFormCredentials) => Promise<void>;
   logout: () => void;
   user: User;
 }

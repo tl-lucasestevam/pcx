@@ -5,4 +5,5 @@ export { default as Input } from "./Form/Input";
 export { default as LoginForm } from "./Form/LoginForm";
 export { default as RecoveryForm } from "./Form/RecoveryForm";
 export { default as SignUpForm } from "./Form/SignUpForm";
+export { default as SettingsDataForm } from "./Form/SettingsDataForm";
 export { default as Modal } from "./Modal";
