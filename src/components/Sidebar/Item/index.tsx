@@ -10,7 +10,17 @@ interface SidebarItemProps {
 
 const Item: FC<SidebarItemProps> = ({ path }) => {
   const { asPath } = useRouter();
-  const isActive = asPath === path;
+  const loginChildrens = ["/settings", "/signup", "/recovery"];
+  const isActive = () => {
+    if (
+      asPath === path ||
+      (loginChildrens.includes(asPath) && path === "/login")
+    ) {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <ListItem
       py={{ base: "0", md: "4" }}
@@ -22,8 +32,8 @@ const Item: FC<SidebarItemProps> = ({ path }) => {
       justifyContent="center"
       transition="0.3s all"
       borderLeft="5px solid"
-      borderColor={isActive ? "red.500" : "transparent"}
-      bg={isActive ? "#000" : "transparent"}
+      borderColor={isActive() ? "red.500" : "transparent"}
+      bg={isActive() ? "#000" : "transparent"}
       _hover={{
         cursor: "pointer",
         borderLeft: "solid",
