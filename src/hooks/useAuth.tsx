@@ -11,7 +11,7 @@ import {
 } from 'react';
 import { SignUpCredentials, User } from '~/interfaces';
 import { api } from '~/services';
-import { useToast } from './useToast';
+import { useToast } from '~/hooks';
 interface AuthContextData {
   signUp: (signUpCredentials: SignUpCredentials) => Promise<void>;
   logout: () => void;

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 const Cart: FC = () => {
   return <h1>Cart</h1>;

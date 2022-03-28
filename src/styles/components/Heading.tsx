@@ -1,14 +1,14 @@
-import { ComponentStyleConfig } from "@chakra-ui/react";
+import { ComponentStyleConfig } from '@chakra-ui/react';
 
 const Heading: ComponentStyleConfig = {
   defaultProps: {
-    variant: "default",
+    variant: 'default',
   },
   variants: {
     default: {
-      fontWeight: "600",
-      fontSize: "36px",
-      lineHeight: "40px",
+      fontWeight: '600',
+      fontSize: '36px',
+      lineHeight: '40px',
     },
   },
 };

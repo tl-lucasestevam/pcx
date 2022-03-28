@@ -1,4 +1,4 @@
-import { cloneElement, FC, ReactElement } from "react";
+import { cloneElement, FC, ReactElement } from 'react';
 
 interface InputIconProps {
   icon: ReactElement;
@@ -8,8 +8,8 @@ interface InputIconProps {
 
 const InputIcon: FC<InputIconProps> = ({
   icon,
-  size = "1.5rem",
-  color = "var(--chakra-colors-gray-600)",
+  size = '1.5rem',
+  color = 'var(--chakra-colors-gray-600)',
 }) => {
   return cloneElement(icon, {
     size,

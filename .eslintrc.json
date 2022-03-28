@@ -10,7 +10,6 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
     "prettier",
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
@@ -25,11 +24,6 @@
     "node": true
   },
   "rules": {
-    "import/no-unresolved": [2, { "commonjs": true, "amd": true }],
-    "import/named": 2,
-    "import/namespace": 2,
-    "import/default": 2,
-    "import/export": 2,
     "comma-dangle": ["error", "always-multiline"],
     "semi": "error",
     "prettier/prettier": "error",

@@ -15,7 +15,6 @@ import { Input, InputIcon } from '~/components';
 
 const SignUpForm: FC = () => {
   const { signUp } = useAuth();
-  s;
   const [loading, setLoading] = useState(false);
 
   const {

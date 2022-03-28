@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Flex } from "@chakra-ui/react";
-import { FC } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Flex } from '@chakra-ui/react';
+import { FC } from 'react';
 
-const Logo: FC = () => {
+const HeaderLogo: FC = () => {
   return (
     <Link passHref href="/products">
       <Flex
@@ -21,4 +21,4 @@ const Logo: FC = () => {
   );
 };
 
-export default Logo;
+export default HeaderLogo;

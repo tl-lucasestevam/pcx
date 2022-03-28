@@ -6,10 +6,10 @@ import {
   InputProps as ChakraInputProps,
   InputLeftElement,
   InputRightElement,
-} from "@chakra-ui/react";
-import { forwardRef, ForwardRefRenderFunction, ReactNode } from "react";
-import { FieldError } from "react-hook-form";
-import InputMask from "react-input-mask";
+} from '@chakra-ui/react';
+import { forwardRef, ForwardRefRenderFunction, ReactNode } from 'react';
+import { FieldError } from 'react-hook-form';
+import InputMask from 'react-input-mask';
 
 interface InputProps extends ChakraInputProps {
   name: string;
@@ -38,7 +38,7 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
         )}
         <ChakraInput
           paddingInlineStart="5.25rem"
-          borderColor={error ? "red.500" : "inherit"}
+          borderColor={error ? 'red.500' : 'inherit'}
           name={name}
           id={name}
           ref={ref}

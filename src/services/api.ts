@@ -1,5 +1,5 @@
-import axios from "axios";
-import { destroyCookie, parseCookies } from "nookies";
+import axios from 'axios';
+import { destroyCookie, parseCookies } from 'nookies';
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL as string,
@@ -7,15 +7,15 @@ const api = axios.create({
 
 api.interceptors.request.use(
   (response) => {
-    const { "pcx.token": token } = parseCookies();
+    const { 'pcx.token': token } = parseCookies();
     if (token) {
-      response!.headers!["Authorization"] = "Bearer " + token;
+      response!.headers!['Authorization'] = 'Bearer ' + token;
     }
     return response;
   },
   (error) => {
     if (error.response.status === 401) {
-      destroyCookie(null, "pcx.token");
+      destroyCookie(null, 'pcx.token');
     }
     Promise.reject(error);
   }

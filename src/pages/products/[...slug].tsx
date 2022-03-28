@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 const ProductDetails: FC = () => {
   return <h1>Product Details</h1>;

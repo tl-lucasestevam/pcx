@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 const Advertise: FC = () => {
   return <h1>Advertise</h1>;

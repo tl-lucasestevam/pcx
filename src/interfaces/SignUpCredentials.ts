@@ -1,5 +1,5 @@
-import { TypeOf } from "yup";
-import { signUpFormSchema } from "../utils";
+import { TypeOf } from 'yup';
+import { signUpFormSchema } from '~/utils';
 
 interface SignUpCredentials extends TypeOf<typeof signUpFormSchema> {}
 

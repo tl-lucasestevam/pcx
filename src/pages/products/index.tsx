@@ -1,5 +1,4 @@
-import { NextPage } from "next";
-import { Header, Sidebar } from "../../components";
+import { NextPage } from 'next';
 
 const Products: NextPage = () => {
   return <h1>Products</h1>;

@@ -1,7 +1,6 @@
-import { Box, Container, Flex, Text } from "@chakra-ui/react";
-import { FC } from "react";
-import LoginButton from "./LoginButton";
-import Logo from "./Logo";
+import { Box, Container, Flex, Text } from '@chakra-ui/react';
+import { FC } from 'react';
+import { HeaderLoginButton, HeaderLogo } from '~/components';
 
 interface HeaderProps {
   title: string;
@@ -10,18 +9,18 @@ interface HeaderProps {
 const Header: FC<HeaderProps> = ({ title }) => {
   return (
     <Flex pos="fixed" w="full" zIndex="999">
-      <Logo />
+      <HeaderLogo />
       <Box h="5rem" bg="white" w="calc(100vw - 5rem)">
         <Container maxW="1120px" h="full">
           <Flex
             h="5rem"
-            justifyContent={{ base: "flex-end", sm: "space-between" }}
+            justifyContent={{ base: 'flex-end', sm: 'space-between' }}
             alignItems="center"
           >
-            <Text variant="header" display={{ base: "none", sm: "block" }}>
+            <Text variant="header" display={{ base: 'none', sm: 'block' }}>
               {title}
             </Text>
-            <LoginButton />
+            <HeaderLoginButton />
           </Flex>
         </Container>
       </Box>

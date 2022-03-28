@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 import {
   Flex,
   Image,
@@ -7,9 +7,9 @@ import {
   Text,
   Button,
   Heading,
-} from "@chakra-ui/react";
-import { LoginForm } from "../../components";
-import Link from "next/link";
+} from '@chakra-ui/react';
+import { LoginForm } from '~/components';
+import Link from 'next/link';
 
 const Login: NextPage = () => {
   return (
@@ -19,8 +19,8 @@ const Login: NextPage = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Grid templateColumns={{ base: "1fr", md: "6fr 4fr" }} gap="5rem">
-        <GridItem d={{ base: "none", md: "flex" }} justifyContent="center">
+      <Grid templateColumns={{ base: '1fr', md: '6fr 4fr' }} gap="5rem">
+        <GridItem d={{ base: 'none', md: 'flex' }} justifyContent="center">
           <Image src="/assets/gpu.svg" alt="gpu image" />
         </GridItem>
         <GridItem d="flex" justifyContent="center" flexDirection="column">
