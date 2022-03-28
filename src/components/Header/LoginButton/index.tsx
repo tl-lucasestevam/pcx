@@ -1,10 +1,10 @@
 import { FC, useContext } from "react";
 import { HStack, Avatar, Text } from "@chakra-ui/react";
-import { AuthContext } from "../../../contexts";
 import Link from "next/link";
+import { useAuth } from "../../../hooks";
 
 const LoginButton: FC = () => {
-  const { user } = useContext(AuthContext);
+  const { user } = useAuth();
   return (
     <Link href="/settings" passHref>
       <HStack spacing="4" _hover={{ cursor: "pointer" }}>

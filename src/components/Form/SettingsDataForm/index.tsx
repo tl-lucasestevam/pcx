@@ -1,12 +1,12 @@
 import { Button, Stack } from "@chakra-ui/react";
-import { FC, useContext, useState } from "react";
+import { FC, useState } from "react";
 import Input from "../Input";
 import * as yup from "yup";
-import { AuthContext } from "../../../contexts";
 import InputIcon from "../InputIcon";
 import { AiOutlineIdcard, AiOutlineMail, AiOutlineUser } from "react-icons/ai";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useAuth } from "../../../hooks";
 
 interface SettingsDataFormCredentials {
   name: string;
@@ -41,7 +41,7 @@ const SettingsDataFormSchema = yup.object({
 });
 
 const SettingsDataForm: FC = () => {
-  const { user } = useContext(AuthContext);
+  const { user } = useAuth();
   const [loading, setLoading] = useState(false);
 
   const {
@@ -70,7 +70,6 @@ const SettingsDataForm: FC = () => {
           placeholder="E-mail"
           type="email"
           error={errors.email}
-          disabled
           {...register("email")}
         />
         <Input

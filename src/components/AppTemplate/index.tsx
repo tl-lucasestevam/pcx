@@ -1,6 +1,6 @@
-import { FC, ReactNode } from "react";
-import { Box, Container } from "@chakra-ui/react";
-import { Sidebar, Header, Modal } from "..";
+import { FC, ReactNode } from 'react';
+import { Box, Container } from '@chakra-ui/react';
+import { Header, Sidebar, Toast } from '~/components';
 
 interface AppTemplateProps {
   children: ReactNode;
@@ -14,11 +14,11 @@ const AppTemplate: FC<AppTemplateProps> = ({ children }) => {
 
       <Box
         ml="auto"
-        pb={{ base: "5rem", md: "0" }}
+        pb={{ base: '5rem', md: '0' }}
         pt="5rem"
-        w={{ base: "100vw", md: "calc(100vw - 5rem)" }}
+        w={{ base: '100vw', md: 'calc(100vw - 5rem)' }}
       >
-        <Modal />
+        <Toast />
         <Container maxW="1120px" h="full" minH="calc(100vh - 5rem)">
           {children}
         </Container>

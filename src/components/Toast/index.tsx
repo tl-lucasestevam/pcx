@@ -8,13 +8,13 @@ import {
   ModalHeader,
   ModalOverlay,
   Text,
-} from "@chakra-ui/react";
-import Image from "next/image";
-import { FC, useContext } from "react";
-import { ModalContext } from "../../contexts";
+} from '@chakra-ui/react';
+import Image from 'next/image';
+import { FC } from 'react';
+import { useToast } from '~/hooks';
 
 const Modal: FC = () => {
-  const { onClose, isOpen, description, type } = useContext(ModalContext);
+  const { onClose, isOpen, description, type } = useToast();
 
   return (
     <ModalChakra onClose={onClose} isOpen={isOpen} isCentered>
@@ -26,12 +26,12 @@ const Modal: FC = () => {
         backgroundPosition="center"
         borderRadius="0px"
         maxW={{
-          base: "90vw",
-          sm: "60vw",
-          md: "40vw",
-          lg: "30vw",
-          xl: "25vw",
-          "2xl": "30vw",
+          base: '90vw',
+          sm: '60vw',
+          md: '40vw',
+          lg: '30vw',
+          xl: '25vw',
+          '2xl': '30vw',
         }}
         backgroundSize="contain"
         backgroundRepeat="no-repeat"
@@ -43,7 +43,7 @@ const Modal: FC = () => {
           alignItems="center"
           justifyContent="center"
         >
-          {type === "Success" ? (
+          {type === 'Success' ? (
             <Image
               width="75px"
               height="75px"
@@ -51,7 +51,7 @@ const Modal: FC = () => {
               src="/assets/icons/check.svg"
             />
           ) : (
-            type === "Error" && (
+            type === 'Error' && (
               <Image
                 width="75px"
                 height="75px"
@@ -62,7 +62,7 @@ const Modal: FC = () => {
           )}
           <Heading mt="4" color="white" textAlign="center">
             {type}
-            {" !"}
+            {' !'}
           </Heading>
         </ModalHeader>
         <ModalBody p="0px">
