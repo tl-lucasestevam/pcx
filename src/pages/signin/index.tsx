@@ -8,10 +8,10 @@ import {
   Button,
   Heading,
 } from '@chakra-ui/react';
-import { LoginForm } from '~/components';
+import { SignInForm } from '~/components';
 import Link from 'next/link';
 
-const Login: NextPage = () => {
+const SignIn: NextPage = () => {
   return (
     <Flex
       py="5rem"
@@ -28,7 +28,7 @@ const Login: NextPage = () => {
           <Text mb="10">
             Log in to start an amazing hardware purchase experience.
           </Text>
-          <LoginForm />
+          <SignInForm />
           <Link href="/signin" passHref>
             <Button variant="grayOutline">Create account</Button>
           </Link>
@@ -38,4 +38,4 @@ const Login: NextPage = () => {
   );
 };
 
-export default Login;
+export default SignIn;

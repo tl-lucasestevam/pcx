@@ -1,9 +1,8 @@
-import type { GetServerSideProps, NextPage } from 'next';
+import type { NextPage } from 'next';
 import Image from 'next/image';
 import { Flex, Grid, GridItem, Text, Heading } from '@chakra-ui/react';
 import { SignUpForm } from '~/components';
 import Head from 'next/head';
-import { parseCookies } from 'nookies';
 
 const SignUp: NextPage = () => {
   return (
@@ -26,6 +25,7 @@ const SignUp: NextPage = () => {
         </GridItem>
         <GridItem d={{ base: 'none', lg: 'flex' }} justifyContent="center">
           <Image
+            priority
             width="625px"
             height="610px"
             src="/assets/motherboard.svg"
@@ -35,23 +35,6 @@ const SignUp: NextPage = () => {
       </Grid>
     </Flex>
   );
-};
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { 'pcx.token': token } = parseCookies(ctx);
-
-  if (token) {
-    return {
-      redirect: {
-        destination: '/settings',
-        permanent: false,
-      },
-    };
-  }
-
-  return {
-    props: {},
-  };
 };
 
 export default SignUp;

@@ -31,23 +31,24 @@
 
 ## 💻 Features
 
-| Feature                  | Coded? | Description                                                                              |
-| ------------------------ | ------ | ---------------------------------------------------------------------------------------- |
-| Home screen              | ❌     | -                                                                                        |
-| Header Component         | ✔      | Reusable header component.                                                               |
-| Sidebar Component        | ✔      | Reusable sidebar component.                                                              |
-| Input Component          | ✔      | Reusable input component with options for left and right icons, masks and custom labels. |
-| Signin screen            | ✔      | Signin screen with react hook form and yup for input validation.                         |
-| Recovery password screen | ✔      | Recovery password screen with react hook form and yup for input validation.              |
-| Signup screen            | ✔      | Signup screen with react hook form and yup for input validation.                         |
-| Modal Hook               | ✔      | Custom modal hook with "success" and "error" options.                                    |
-| Products list screen     | ❌     | -                                                                                        |
-| Filter Modal             | ❌     | -                                                                                        |
-| Product screen           | ❌     | -                                                                                        |
-| Favorites screen         | ❌     | -                                                                                        |
-| Checkout screen          | ❌     | -                                                                                        |
-| Create product screen    | ❌     | -                                                                                        |
-| Edit product screen      | ❌     | -                                                                                        |
+| Feature                      | Coded? | Description                                                                              |
+| ---------------------------- | ------ | ---------------------------------------------------------------------------------------- |
+| Home screen                  | ❌     | -                                                                                        |
+| Header Component             | ✔      | Reusable header component.                                                               |
+| Sidebar Component            | ✔      | Reusable sidebar component.                                                              |
+| Input Component              | ✔      | Reusable input component with options for left and right icons, masks and custom labels. |
+| Signin screen                | ✔      | Signin screen with react hook form and yup for input validation.                         |
+| Recovery password screen     | ✔      | Recovery password screen with react hook form and yup for input validation.              |
+| Signup screen                | ✔      | Signup screen with react hook form and yup for input validation.                         |
+| Modal Hook                   | ✔      | Custom modal hook with "success" and "error" options.                                    |
+| Middleware to private routes | ✔      | Redirect to /login if logged out users try access private routes.                        |
+| Products list screen         | ❌     | -                                                                                        |
+| Filter Modal                 | ❌     | -                                                                                        |
+| Product screen               | ❌     | -                                                                                        |
+| Favorites screen             | ❌     | -                                                                                        |
+| Checkout screen              | ❌     | -                                                                                        |
+| Create product screen        | ❌     | -                                                                                        |
+| Edit product screen          | ❌     | -                                                                                        |
 
 ## 🛠 Technologies Used
 

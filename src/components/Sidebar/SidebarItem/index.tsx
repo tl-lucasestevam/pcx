@@ -14,7 +14,7 @@ const SidebarItem: FC<SidebarItemProps> = ({ path }) => {
   const isActive = () => {
     if (
       asPath === path ||
-      (loginChildrens.includes(asPath) && path === '/login')
+      (loginChildrens.includes(asPath) && path === '/signin')
     ) {
       return true;
     }

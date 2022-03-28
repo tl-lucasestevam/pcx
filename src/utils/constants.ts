@@ -3,5 +3,9 @@ export const NavLinks = [
   { name: 'favorites' },
   { name: 'cart' },
   { name: 'advertise' },
-  { name: 'login' },
+  { name: 'signin' },
 ];
+
+export const privateForNonLoggedUsers = ['/settings', '/advertise'];
+
+export const privateForLoggedUsers = ['/signin', '/signup', '/recovery'];

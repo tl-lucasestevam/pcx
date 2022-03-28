@@ -8,7 +8,7 @@ import { loginFormSchema } from '~/utils';
 import LoginCredentials from '~/interfaces/LoginCredentials';
 import { Input, InputIcon } from '~/components';
 
-const LoginForm: FC = () => {
+const SignInForm: FC = () => {
   const {
     register,
     formState: { errors },
@@ -60,4 +60,4 @@ const LoginForm: FC = () => {
   );
 };
 
-export default LoginForm;
+export default SignInForm;
